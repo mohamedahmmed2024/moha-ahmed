@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Data Entry Form</title>
+</head>
+<body onload="readAll()">
+    <div class="container">
+        <div class="form_container">
+                     <form class="create_form">
+                <input type="text" placeholder="Enter Name" class="name" required>
+                <input type="tel" placeholder="Enter Telephone" class="telephone" required>
+                <button type="button" onclick="addEntry()">Add Entry</button>
+            </form>
+           
+            <form class="update_form">
+                <input type="hidden" class="update-id">
+                <input type="text" placeholder="Update Name" class="update-name" required>
+                <input type="tel" placeholder="Update Telephone" class="update-telephone" required>
+                <button type="button" onclick="updateEntry()">Update Entry</button>
+            </form>
+        
+            <button class="addbtn" onclick="showCreateForm()">Add New Entry</button>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Telephone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="table_data"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
